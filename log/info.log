@@ -1,0 +1,132 @@
+09/11/2015 - 14:28:02.763 : [T001] : [INFO]    : Program started at: 09/11/2015 - 14:28:01.973
+09/11/2015 - 14:28:02.817 : [T001] : [INFO]    : Initializing rfharvester.download.PortfolioDownloader
+09/11/2015 - 14:28:02.980 : [T001] : [INFO]    : Connection with jdbc:postgresql://10.1.2.8:5432/portfoliodw established
+09/11/2015 - 14:28:03.234 : [T001] : [INFO]    : Connection with jdbc:sqlite:sql/downloadtest.db established
+09/11/2015 - 14:28:03.346 : [T001] : [INFO]    : Connection with jdbc:mysql://10.1.2.114/lf_prod established
+09/11/2015 - 14:28:03.397 : [T001] : [INFO]    : Initializing rfharvester.upload.UploadControlsMySQL
+09/11/2015 - 14:28:03.506 : [T001] : [INFO]    : Connection with jdbc:mysql://10.1.2.140/lf_prod?characterEncoding=ISO-8859-1 established
+09/11/2015 - 14:28:03.556 : [T001] : [INFO]    : Initializing rfharvester.upload.UploadMetadatasMySQL
+09/11/2015 - 14:28:03.655 : [T001] : [INFO]    : Connection with jdbc:mysql://10.1.2.140/lf_prod?characterEncoding=ISO-8859-1 established
+09/11/2015 - 14:28:03.697 : [T001] : [INFO]    : Initializing rfharvester.upload.UploadPortfolioDatasMySQL
+09/11/2015 - 14:28:03.790 : [T001] : [INFO]    : Connection with jdbc:mysql://10.1.2.140/lf_prod?characterEncoding=ISO-8859-1 established
+09/11/2015 - 14:28:03.830 : [T001] : [INFO]    : Initializing rfharvester.upload.UploadVolumesMySQL
+09/11/2015 - 14:28:03.939 : [T001] : [INFO]    : Connection with jdbc:mysql://10.1.2.140/lf_prod?characterEncoding=ISO-8859-1 established
+09/11/2015 - 14:28:03.989 : [T001] : [INFO]    : Initializing rfharvester.upload.UploadCollectionsMySQL
+09/11/2015 - 14:28:04.081 : [T001] : [INFO]    : Connection with jdbc:mysql://10.1.2.140/lf_prod?characterEncoding=ISO-8859-1 established
+09/11/2015 - 14:28:04.126 : [T001] : [INFO]    : Initializing rfharvester.upload.UploadNoticesSolr
+09/11/2015 - 14:28:04.551 : [T001] : [INFO]    : Connection with http://10.1.2.140:8080/solr/ established
+09/11/2015 - 14:28:04.606 : [T001] : [INFO]    : Connection with http://10.1.2.140:8080/solr/notices/ established
+09/11/2015 - 14:28:04.647 : [T001] : [INFO]    : Connection with http://10.1.2.140:8080/solr/notices_new/ established
+09/11/2015 - 14:28:04.688 : [T001] : [INFO]    : Begin initialisation phase
+09/11/2015 - 14:28:07.000 : [T001] : [INFO]    : Begin downloading phase
+09/11/2015 - 14:28:07.050 : [T001] : [INFO]    : rfharvester.download.PortfolioDownloader Download Phase 0
+09/11/2015 - 14:28:07.271 : [T001] : [INFO]    : 32 date end new
+09/11/2015 - 14:28:07.827 : [T001] : [INFO]    : 59932 authority indices
+09/11/2015 - 14:28:07.928 : [T001] : [INFO]    : 21 primary document types
+09/11/2015 - 14:28:08.029 : [T001] : [INFO]    : 32 document types
+09/11/2015 - 14:28:08.135 : [T001] : [INFO]    : 91 reflabel
+09/11/2015 - 14:28:08.186 : [T001] : [INFO]    : 91 refparent
+09/11/2015 - 14:28:08.236 : [T001] : [INFO]    : Begin cduTranslationInfo recuperation
+09/11/2015 - 14:28:08.353 : [T001] : [INFO]    : 503 cduThemesReferences
+09/11/2015 - 14:28:08.443 : [T001] : [INFO]    : 134 cduThemesExclusions
+09/11/2015 - 14:28:08.486 : [T001] : [INFO]    : Begin bdmTranslationInfoReferences recuperation
+09/11/2015 - 14:28:08.571 : [T001] : [INFO]    : 5 sources found (including portfolio)
+09/11/2015 - 14:28:08.612 : [T001] : [INFO]    : Begin bdmTranslationInfoReferences recuperation for source 'mdbeaf'
+09/11/2015 - 14:28:08.700 : [T001] : [INFO]    : 51 bdmThemesReferencesPerSource
+09/11/2015 - 14:28:08.737 : [T001] : [INFO]    : Begin bdmTranslationInfoReferences recuperation for source 'mdbesv'
+09/11/2015 - 14:28:08.826 : [T001] : [INFO]    : 62 bdmThemesReferencesPerSource
+09/11/2015 - 14:28:08.862 : [T001] : [INFO]    : Begin bdmTranslationInfoReferences recuperation for source 'mdbrg'
+09/11/2015 - 14:28:08.953 : [T001] : [INFO]    : 84 bdmThemesReferencesPerSource
+09/11/2015 - 14:28:08.996 : [T001] : [INFO]    : Begin bdmTranslationInfoReferences recuperation for source 'portfoliodw'
+09/11/2015 - 14:28:09.104 : [T001] : [INFO]    : 503 bdmThemesReferencesPerSource
+09/11/2015 - 14:28:09.146 : [T001] : [INFO]    : Begin bdmTranslationInfoReferences recuperation for source 'mdbfilms'
+09/11/2015 - 14:28:09.234 : [T001] : [INFO]    : 65 bdmThemesReferencesPerSource
+09/11/2015 - 14:28:09.272 : [T001] : [INFO]    : Begin bdmTranslationInfoExclusions recuperation
+09/11/2015 - 14:28:09.356 : [T001] : [INFO]    : 1 bdmThemesExclusions
+09/11/2015 - 14:28:09.397 : [T001] : [INFO]    : Begin bdmTranslationInfoExclusions recuperation for source 'portfoliodw'
+09/11/2015 - 14:28:09.488 : [T001] : [INFO]    : 134 bdmThemesExclusionsPerSource
+09/11/2015 - 14:28:09.531 : [T001] : [INFO]    : rfharvester.download.PortfolioDownloader Download Phase 1
+09/11/2015 - 14:28:21.841 : [T001] : [INFO]    : Start full harvest
+09/11/2015 - 14:28:26.702 : [T001] : [INFO]    : 412821 selected notices in dc_notices
+09/11/2015 - 14:28:26.743 : [T001] : [INFO]    : 21 transactions of 20000 notices are gonna be commited into local database
+09/11/2015 - 14:28:43.386 : [T001] : [INFO]    : Transaction  1 on 21 commited -   4% done
+09/11/2015 - 14:28:46.611 : [T001] : [INFO]    : Transaction  2 on 21 commited -   9% done
+09/11/2015 - 14:28:50.094 : [T001] : [INFO]    : Transaction  3 on 21 commited -  14% done
+09/11/2015 - 14:28:53.327 : [T001] : [INFO]    : Transaction  4 on 21 commited -  19% done
+09/11/2015 - 14:28:58.152 : [T001] : [INFO]    : Transaction  5 on 21 commited -  24% done
+09/11/2015 - 14:29:03.377 : [T001] : [INFO]    : Transaction  6 on 21 commited -  29% done
+09/11/2015 - 14:29:08.010 : [T001] : [INFO]    : Transaction  7 on 21 commited -  33% done
+09/11/2015 - 14:29:12.676 : [T001] : [INFO]    : Transaction  8 on 21 commited -  38% done
+09/11/2015 - 14:29:17.859 : [T001] : [INFO]    : Transaction  9 on 21 commited -  43% done
+09/11/2015 - 14:29:23.134 : [T001] : [INFO]    : Transaction 10 on 21 commited -  48% done
+09/11/2015 - 14:29:27.409 : [T001] : [INFO]    : Transaction 11 on 21 commited -  53% done
+09/11/2015 - 14:29:31.567 : [T001] : [INFO]    : Transaction 12 on 21 commited -  58% done
+09/11/2015 - 14:29:36.342 : [T001] : [INFO]    : Transaction 13 on 21 commited -  62% done
+09/11/2015 - 14:29:41.577 : [T001] : [INFO]    : Transaction 14 on 21 commited -  67% done
+09/11/2015 - 14:29:46.395 : [T001] : [INFO]    : Transaction 15 on 21 commited -  72% done
+09/11/2015 - 14:29:51.299 : [T001] : [INFO]    : Transaction 16 on 21 commited -  77% done
+09/11/2015 - 14:29:56.057 : [T001] : [INFO]    : Transaction 17 on 21 commited -  82% done
+09/11/2015 - 14:30:00.249 : [T001] : [INFO]    : Transaction 18 on 21 commited -  87% done
+09/11/2015 - 14:30:04.290 : [T001] : [INFO]    : Transaction 19 on 21 commited -  92% done
+09/11/2015 - 14:30:08.023 : [T001] : [INFO]    : Transaction 20 on 21 commited -  96% done
+09/11/2015 - 14:30:11.840 : [T001] : [INFO]    : Transaction 21 on 21 commited - 100% done
+09/11/2015 - 14:30:11.906 : [T001] : [INFO]    : Last transaction commited with no error.
+09/11/2015 - 14:30:11.953 : [T001] : [INFO]    : rfharvester.download.PortfolioDownloader Download Phase 2
+09/11/2015 - 14:30:12.004 : [T001] : [INFO]    : rfharvester.download.PortfolioDownloader Download Phase 3
+09/11/2015 - 14:30:12.490 : [T001] : [INFO]    : 412821 selected notices in dc_notices_lite
+09/11/2015 - 14:30:12.537 : [T001] : [INFO]    : 21 transactions of 20000 notices are gonna be commited through rfharvester.upload.UploadControlsMySQL
+09/11/2015 - 14:30:12.587 : [T001] : [INFO]    : 21 transactions of 20000 notices are gonna be commited through rfharvester.upload.UploadMetadatasMySQL
+09/11/2015 - 14:30:12.637 : [T001] : [INFO]    : 21 transactions of 20000 notices are gonna be commited through rfharvester.upload.UploadPortfolioDatasMySQL
+09/11/2015 - 14:30:12.688 : [T001] : [INFO]    : 21 transactions of 20000 notices are gonna be commited through rfharvester.upload.UploadVolumesMySQL
+09/11/2015 - 14:30:12.738 : [T001] : [INFO]    : -412820 transactions of -1 notices are gonna be commited through rfharvester.upload.UploadCollectionsMySQL
+09/11/2015 - 14:30:12.788 : [T001] : [INFO]    : 21 transactions of 20000 notices are gonna be commited through rfharvester.upload.UploadNoticesSolr
+09/11/2015 - 14:31:34.645 : [T001] : [INFO]    : Transaction  1 on 21 commited for rfharvester.upload.UploadVolumesMySQL -   4% done
+09/11/2015 - 14:31:37.896 : [T001] : [INFO]    : Transaction  1 on 21 commited for rfharvester.upload.UploadControlsMySQL -   4% done
+09/11/2015 - 14:31:37.974 : [T001] : [INFO]    : Transaction  1 on 21 commited for rfharvester.upload.UploadMetadatasMySQL -   4% done
+09/11/2015 - 14:31:38.084 : [T001] : [INFO]    : Transaction  1 on 21 commited for rfharvester.upload.UploadPortfolioDatasMySQL -   4% done
+09/11/2015 - 14:32:15.895 : [T001] : [INFO]    : Transaction  1 on 21 commited for rfharvester.upload.UploadNoticesSolr -   4% done
+09/11/2015 - 14:33:29.829 : [T001] : [INFO]    : Transaction  2 on 21 commited for rfharvester.upload.UploadVolumesMySQL -   8% done
+09/11/2015 - 14:33:47.555 : [T001] : [INFO]    : Transaction  2 on 21 commited for rfharvester.upload.UploadControlsMySQL -   9% done
+09/11/2015 - 14:33:47.631 : [T001] : [INFO]    : Transaction  2 on 21 commited for rfharvester.upload.UploadMetadatasMySQL -   9% done
+09/11/2015 - 14:33:47.706 : [T001] : [INFO]    : Transaction  2 on 21 commited for rfharvester.upload.UploadPortfolioDatasMySQL -   9% done
+09/11/2015 - 14:34:20.176 : [T001] : [INFO]    : Transaction  2 on 21 commited for rfharvester.upload.UploadNoticesSolr -   9% done
+09/11/2015 - 14:35:11.562 : [T001] : [INFO]    : Transaction  3 on 21 commited for rfharvester.upload.UploadVolumesMySQL -  12% done
+09/11/2015 - 14:35:41.730 : [T001] : [INFO]    : Transaction  3 on 21 commited for rfharvester.upload.UploadControlsMySQL -  14% done
+09/11/2015 - 14:35:41.812 : [T001] : [INFO]    : Transaction  3 on 21 commited for rfharvester.upload.UploadMetadatasMySQL -  14% done
+09/11/2015 - 14:35:41.908 : [T001] : [INFO]    : Transaction  3 on 21 commited for rfharvester.upload.UploadPortfolioDatasMySQL -  14% done
+09/11/2015 - 14:36:19.501 : [T001] : [INFO]    : Transaction  3 on 21 commited for rfharvester.upload.UploadNoticesSolr -  14% done
+09/11/2015 - 14:36:58.635 : [T001] : [INFO]    : Transaction  4 on 21 commited for rfharvester.upload.UploadVolumesMySQL -  16% done
+09/11/2015 - 14:37:37.878 : [T001] : [INFO]    : Transaction  4 on 21 commited for rfharvester.upload.UploadControlsMySQL -  19% done
+09/11/2015 - 14:37:37.975 : [T001] : [INFO]    : Transaction  4 on 21 commited for rfharvester.upload.UploadMetadatasMySQL -  19% done
+09/11/2015 - 14:37:38.084 : [T001] : [INFO]    : Transaction  4 on 21 commited for rfharvester.upload.UploadPortfolioDatasMySQL -  19% done
+09/11/2015 - 14:38:18.333 : [T001] : [INFO]    : Transaction  4 on 21 commited for rfharvester.upload.UploadNoticesSolr -  19% done
+09/11/2015 - 14:38:44.181 : [T001] : [INFO]    : Transaction  5 on 21 commited for rfharvester.upload.UploadVolumesMySQL -  20% done
+09/11/2015 - 14:39:44.358 : [T001] : [INFO]    : Transaction  5 on 21 commited for rfharvester.upload.UploadControlsMySQL -  24% done
+09/11/2015 - 14:39:44.419 : [T001] : [INFO]    : Transaction  5 on 21 commited for rfharvester.upload.UploadMetadatasMySQL -  24% done
+09/11/2015 - 14:39:44.839 : [T001] : [INFO]    : Transaction  5 on 21 commited for rfharvester.upload.UploadPortfolioDatasMySQL -  24% done
+09/11/2015 - 14:40:19.493 : [T001] : [INFO]    : Transaction  5 on 21 commited for rfharvester.upload.UploadNoticesSolr -  24% done
+09/11/2015 - 14:40:30.279 : [T001] : [INFO]    : Transaction  6 on 21 commited for rfharvester.upload.UploadVolumesMySQL -  24% done
+09/11/2015 - 14:41:35.425 : [T001] : [INFO]    : Transaction  7 on 21 commited for rfharvester.upload.UploadVolumesMySQL -  28% done
+09/11/2015 - 14:41:47.947 : [T001] : [INFO]    : Transaction  6 on 21 commited for rfharvester.upload.UploadControlsMySQL -  29% done
+09/11/2015 - 14:41:48.033 : [T001] : [INFO]    : Transaction  6 on 21 commited for rfharvester.upload.UploadMetadatasMySQL -  29% done
+09/11/2015 - 14:41:48.136 : [T001] : [INFO]    : Transaction  6 on 21 commited for rfharvester.upload.UploadPortfolioDatasMySQL -  29% done
+09/11/2015 - 14:42:24.803 : [T001] : [INFO]    : Transaction  6 on 21 commited for rfharvester.upload.UploadNoticesSolr -  29% done
+09/11/2015 - 14:43:28.237 : [T001] : [INFO]    : Transaction  8 on 21 commited for rfharvester.upload.UploadVolumesMySQL -  32% done
+09/11/2015 - 14:43:42.890 : [T001] : [INFO]    : Transaction  7 on 21 commited for rfharvester.upload.UploadControlsMySQL -  33% done
+09/11/2015 - 14:43:43.621 : [T001] : [INFO]    : Transaction  7 on 21 commited for rfharvester.upload.UploadMetadatasMySQL -  33% done
+09/11/2015 - 14:43:43.730 : [T001] : [INFO]    : Transaction  7 on 21 commited for rfharvester.upload.UploadPortfolioDatasMySQL -  33% done
+09/11/2015 - 14:44:25.429 : [T001] : [INFO]    : Transaction  7 on 21 commited for rfharvester.upload.UploadNoticesSolr -  33% done
+09/11/2015 - 14:45:28.290 : [T001] : [INFO]    : Transaction  9 on 21 commited for rfharvester.upload.UploadVolumesMySQL -  37% done
+09/11/2015 - 14:45:52.071 : [T001] : [INFO]    : Transaction  8 on 21 commited for rfharvester.upload.UploadControlsMySQL -  38% done
+09/11/2015 - 14:45:52.191 : [T001] : [INFO]    : Transaction  8 on 21 commited for rfharvester.upload.UploadMetadatasMySQL -  38% done
+09/11/2015 - 14:45:56.167 : [T001] : [INFO]    : Transaction  8 on 21 commited for rfharvester.upload.UploadPortfolioDatasMySQL -  38% done
+09/11/2015 - 14:46:35.735 : [T001] : [INFO]    : Transaction  8 on 21 commited for rfharvester.upload.UploadNoticesSolr -  38% done
+09/11/2015 - 14:47:28.441 : [T001] : [INFO]    : Transaction 10 on 21 commited for rfharvester.upload.UploadVolumesMySQL -  41% done
+09/11/2015 - 14:48:00.744 : [T001] : [INFO]    : Transaction  9 on 21 commited for rfharvester.upload.UploadControlsMySQL -  43% done
+09/11/2015 - 14:48:00.939 : [T001] : [INFO]    : Transaction  9 on 21 commited for rfharvester.upload.UploadMetadatasMySQL -  43% done
+09/11/2015 - 14:48:01.051 : [T001] : [INFO]    : Transaction  9 on 21 commited for rfharvester.upload.UploadPortfolioDatasMySQL -  43% done
+09/11/2015 - 14:48:49.765 : [T001] : [INFO]    : Transaction  9 on 21 commited for rfharvester.upload.UploadNoticesSolr -  43% done
+09/11/2015 - 14:49:37.354 : [T001] : [INFO]    : Transaction 11 on 21 commited for rfharvester.upload.UploadVolumesMySQL -  46% done
+09/11/2015 - 14:50:17.516 : [T001] : [INFO]    : Transaction 10 on 21 commited for rfharvester.upload.UploadControlsMySQL -  48% done
+09/11/2015 - 14:50:17.606 : [T001] : [INFO]    : Transaction 10 on 21 commited for rfharvester.upload.UploadMetadatasMySQL -  48% done
+09/11/2015 - 14:50:17.712 : [T001] : [INFO]    : Transaction 10 on 21 commited for rfharvester.upload.UploadPortfolioDatasMySQL -  48% done

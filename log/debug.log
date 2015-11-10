@@ -1,0 +1,57 @@
+09/11/2015 - 14:28:02.868 : [T001] : [DEBUG]   : Init org.postgresql.Driver
+09/11/2015 - 14:28:03.027 : [T001] : [DEBUG]   : Init org.sqlite.JDBC
+09/11/2015 - 14:28:03.277 : [T001] : [DEBUG]   : Init com.mysql.jdbc.Driver
+09/11/2015 - 14:28:03.444 : [T001] : [DEBUG]   : Init com.mysql.jdbc.Driver
+09/11/2015 - 14:28:03.603 : [T001] : [DEBUG]   : Init com.mysql.jdbc.Driver
+09/11/2015 - 14:28:03.737 : [T001] : [DEBUG]   : Init com.mysql.jdbc.Driver
+09/11/2015 - 14:28:03.870 : [T001] : [DEBUG]   : Init com.mysql.jdbc.Driver
+09/11/2015 - 14:28:04.029 : [T001] : [DEBUG]   : Init com.mysql.jdbc.Driver
+09/11/2015 - 14:28:04.734 : [T010] : [DEBUG]   : DROP TABLE IF EXISTS controls_new
+09/11/2015 - 14:28:04.734 : [T011] : [DEBUG]   : DROP TABLE IF EXISTS metadatas_new
+09/11/2015 - 14:28:04.734 : [T012] : [DEBUG]   : DROP TABLE IF EXISTS portfolio_datas_new
+09/11/2015 - 14:28:04.735 : [T013] : [DEBUG]   : DROP TABLE IF EXISTS volumes_new
+09/11/2015 - 14:28:04.736 : [T015] : [DEBUG]   : solrnotices_new.deleteByQuery("*:*");
+09/11/2015 - 14:28:04.781 : [T010] : [DEBUG]   : CREATE TABLE controls_new LIKE controls
+09/11/2015 - 14:28:04.823 : [T012] : [DEBUG]   : CREATE TABLE portfolio_datas_new LIKE portfolio_datas
+09/11/2015 - 14:28:04.873 : [T010] : [DEBUG]   : INSERT INTO controls_new (SELECT * FROM controls WHERE collection_id != 5)
+09/11/2015 - 14:28:04.948 : [T011] : [DEBUG]   : CREATE TABLE metadatas_new LIKE metadatas
+09/11/2015 - 14:28:04.990 : [T013] : [DEBUG]   : CREATE TABLE volumes_new LIKE volumes
+09/11/2015 - 14:28:05.120 : [T015] : [DEBUG]   : {responseHeader={status=0,QTime=7}}
+09/11/2015 - 14:28:05.122 : [T012] : [DEBUG]   : portfolio_datas columns : dc_identifier, isbn, issn, call_num, last_issue, audience, genre, publisher_country, copyright, display_group, broadcast_group, license_info, commercial_number, binding, theme, metadata_id, is_available, indice, display_groups, issues, issue_title, conservation, label_indice, musical_kind, abstract
+09/11/2015 - 14:28:05.125 : [T013] : [DEBUG]   : INSERT INTO volumes_new (SELECT * FROM volumes WHERE collection_id != 5)
+09/11/2015 - 14:28:05.168 : [T011] : [DEBUG]   : INSERT INTO metadatas_new (SELECT * FROM metadatas WHERE collection_id != 5)
+09/11/2015 - 14:28:05.214 : [T013] : [DEBUG]   : volumes columns : call_num, collection_id, dc_identifier, number, availability, location, label, link_label, launch_url, link, support, metadata_id, object_id, document_id, barcode, source, launchable, note, external_access
+09/11/2015 - 14:28:05.860 : [T010] : [DEBUG]   : controls columns : oai_identifier, title, collection_id, description, url, collection_name
+09/11/2015 - 14:28:06.584 : [T011] : [DEBUG]   : metadatas columns : collection_id, controls_id, dc_title, dc_creator, dc_subject, dc_description, dc_publisher, dc_contributor, dc_date, dc_type, dc_format, dc_identifier_text, dc_source, dc_relation, dc_coverage, dc_rights, osu_volume, osu_issue, osu_linking, osu_openurl, osu_thumbnail, dc_language, dc_identifier, dc_coverage_spatial
+09/11/2015 - 14:28:07.112 : [T001] : [DEBUG]   : JDBC verification:
+09/11/2015 - 14:28:07.172 : [T001] : [DEBUG]   : PostgreSQL 9.2.8 on x86_64-unknown-linux-gnu, compiled by gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-4), 64-bit
+09/11/2015 - 14:28:07.217 : [T001] : [DEBUG]   : SELECT CONVERT(CAST(CONVERT(document_types.name USING LATIN1) AS BINARY) USING UTF8) AS new_period_name, primary_document_types.new_period AS new_period FROM primary_document_types,document_types WHERE primary_document_types.name != 'None' AND document_types.collection_id = 5 AND primary_document_types.id = document_types.primary_document_type
+09/11/2015 - 14:28:07.318 : [T001] : [DEBUG]   : SELECT indice, libelle FROM dw_authorityindices
+09/11/2015 - 14:28:07.877 : [T001] : [DEBUG]   : SELECT id, CONVERT(CAST(CONVERT(name USING LATIN1) AS BINARY) USING UTF8) AS name FROM primary_document_types
+09/11/2015 - 14:28:07.977 : [T001] : [DEBUG]   : SELECT CONVERT(CAST(CONVERT(name USING LATIN1) AS BINARY) USING UTF8) AS name, primary_document_type FROM document_types WHERE collection_id = 5
+09/11/2015 - 14:28:08.077 : [T001] : [DEBUG]   : SELECT reference, parent, CONVERT(CAST(CONVERT(label USING LATIN1) AS BINARY) USING UTF8) AS label FROM themes
+09/11/2015 - 14:28:08.286 : [T001] : [DEBUG]   : SELECT CONVERT(CAST(CONVERT(ref_source USING LATIN1) AS BINARY) USING UTF8) AS ref_source, ref_theme FROM themes_references WHERE source = 'portfoliodw' AND construction_mode != 'E'
+09/11/2015 - 14:28:08.394 : [T001] : [DEBUG]   : SELECT CONVERT(CAST(CONVERT(ref_source USING LATIN1) AS BINARY) USING UTF8) AS ref_source, ref_theme FROM themes_references WHERE source = 'portfoliodw' AND construction_mode = 'E'
+09/11/2015 - 14:28:08.528 : [T001] : [DEBUG]   : SELECT DISTINCT source FROM themes_references WHERE construction_mode != 'E'
+09/11/2015 - 14:28:08.653 : [T001] : [DEBUG]   : SELECT ref_source, construction_mode, ref_theme FROM themes_references WHERE construction_mode != 'E' AND source = 'mdbeaf'
+09/11/2015 - 14:28:08.779 : [T001] : [DEBUG]   : SELECT ref_source, construction_mode, ref_theme FROM themes_references WHERE construction_mode != 'E' AND source = 'mdbesv'
+09/11/2015 - 14:28:08.904 : [T001] : [DEBUG]   : SELECT ref_source, construction_mode, ref_theme FROM themes_references WHERE construction_mode != 'E' AND source = 'mdbrg'
+09/11/2015 - 14:28:09.038 : [T001] : [DEBUG]   : SELECT ref_source, construction_mode, ref_theme FROM themes_references WHERE construction_mode != 'E' AND source = 'portfoliodw'
+09/11/2015 - 14:28:09.188 : [T001] : [DEBUG]   : SELECT ref_source, construction_mode, ref_theme FROM themes_references WHERE construction_mode != 'E' AND source = 'mdbfilms'
+09/11/2015 - 14:28:09.313 : [T001] : [DEBUG]   : SELECT DISTINCT source FROM themes_references WHERE construction_mode = 'E'
+09/11/2015 - 14:28:09.439 : [T001] : [DEBUG]   : SELECT ref_source, construction_mode, ref_theme FROM themes_references WHERE construction_mode = 'E' AND source = 'portfoliodw'
+09/11/2015 - 14:28:09.657 : [T001] : [DEBUG]   : dc_notices columns : [dc_identifier, dc_type, dc_date, dc_date_long, bpi_cote, bpi_loca, bpi_dispo_ex, bpi_notes_ex, bpi_collection, bpi_dernier_no, dc_title_revue, bpi_dispo, bpi_nouveaute, bpi_theme, bpi_theme_lib, bpi_gr_diff, bpi_dm_access, bpi_dm_lien_lib, bpi_dm_lien_url, bpi_dm_launch, bpi_dm_info, bpi_dm_title, bpi_dm_barcode, bpi_dm_type, dc_format_court, bpi_audience, bpi_genre_mus, bpi_genre_litt, bpi_genre_film, bpi_publishercountry, dc_language, dc_language_long, bpi_abstract, bpi_conservation, bpi_copy, bpi_creation, bpi_creator2, bpi_indice, bpi_isbn, bpi_issn, bpi_licence, bpi_modification, bpi_numeroscommerciaux, bpi_reliure, dc_contributor, dc_coverage_spatial, dc_coverage_temporal, dc_creator, dc_description, dc_format, dc_publisher, dc_relation, dc_rights, dc_subject, dc_title, dc_title_court]
+09/11/2015 - 14:28:09.698 : [T001] : [DEBUG]   : DROP TABLE IF EXISTS dc_notices_lite
+09/11/2015 - 14:28:21.587 : [T001] : [DEBUG]   : CREATE TABLE dc_notices_lite (dc_identifier int4, dc_type text, dc_date text, dc_date_long text, bpi_cote text, bpi_loca text, bpi_dispo_ex text, bpi_notes_ex text, bpi_collection text, bpi_dernier_no text, dc_title_revue text, bpi_dispo text, bpi_nouveaute text, bpi_theme text, bpi_theme_lib text, bpi_gr_diff text, bpi_dm_access text, bpi_dm_lien_lib text, bpi_dm_lien_url text, bpi_dm_launch text, bpi_dm_info text, bpi_dm_title text, bpi_dm_barcode text, bpi_dm_type text, dc_format_court text, bpi_audience text, bpi_genre_mus text, bpi_genre_litt text, bpi_genre_film text, bpi_publishercountry text, dc_language text, dc_language_long text, bpi_abstract text, bpi_conservation text, bpi_copy text, bpi_creation text, bpi_creator2 text, bpi_indice text, bpi_isbn text, bpi_issn text, bpi_licence text, bpi_modification text, bpi_numeroscommerciaux text, bpi_reliure text, dc_contributor text, dc_coverage_spatial text, dc_coverage_temporal text, dc_creator text, dc_description text, dc_format text, dc_publisher text, dc_relation text, dc_rights text, dc_subject text, dc_title text, dc_title_court text)
+09/11/2015 - 14:28:21.925 : [T001] : [DEBUG]   : SELECT COUNT(*) AS rowcount FROM dc_notices
+09/11/2015 - 14:28:26.793 : [T001] : [DEBUG]   : SELECT * FROM dc_notices
+09/11/2015 - 14:30:12.107 : [T001] : [DEBUG]   : SELECT COUNT(*) AS rowcount FROM dc_notices_lite
+09/11/2015 - 14:32:15.836 : [T001] : [DEBUG]   : SOLR commit finished with status 0 and last 33776 milliseconds
+09/11/2015 - 14:34:20.100 : [T001] : [DEBUG]   : SOLR commit finished with status 0 and last 26690 milliseconds
+09/11/2015 - 14:36:19.460 : [T001] : [DEBUG]   : SOLR commit finished with status 0 and last 32380 milliseconds
+09/11/2015 - 14:38:18.171 : [T001] : [DEBUG]   : SOLR commit finished with status 0 and last 31990 milliseconds
+09/11/2015 - 14:40:19.454 : [T001] : [DEBUG]   : SOLR commit finished with status 0 and last 28717 milliseconds
+09/11/2015 - 14:42:24.760 : [T001] : [DEBUG]   : SOLR commit finished with status 0 and last 29236 milliseconds
+09/11/2015 - 14:44:25.385 : [T001] : [DEBUG]   : SOLR commit finished with status 0 and last 34058 milliseconds
+09/11/2015 - 14:46:35.683 : [T001] : [DEBUG]   : SOLR commit finished with status 0 and last 36734 milliseconds
+09/11/2015 - 14:48:49.721 : [T001] : [DEBUG]   : SOLR commit finished with status 0 and last 43727 milliseconds
